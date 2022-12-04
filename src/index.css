@@ -1,13 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap");
 
-:root{
-  --main: hsl(263, 100%, 9%);
-  --blue-glow:187, 100%, 40%;
-  --white: #fff;
+:root {
+  --bg-color: hsl(265, 100%, 4%);
+  --white: 45, 100%, 98%;
+  --blue: 187, 100%, 40%;
+  --purple: 276, 100%, 41%;
+  --glow-blue: hsla(var(--blue), 0.2), hsla(var(--blue), 0);
+  --glow-purple: hsla(var(--purple), 0.2), hsla(var(--purple), 0);
+  --glow-h1: hsl(276, 40%, 70%), hsl(var(--white));
+  --glow-link:hsl(298, 100%, 50%),hsl(var(--blue));
 }
 
 html {
   font-size: 62.5%;
+  letter-spacing: 0.1rem;
 }
 
 body {
@@ -16,8 +22,32 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main);
-  background-image: radial-gradient(farthest-side at 110vw 80vh,hsla(var(--blue-glow),0.2), hsla(var(--blue-glow),0));
+  background-color: var(--bg-color);
+  position: relative;
+  color: hsl(var(--white));
+}
+
+.gradient-one {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  background-image: radial-gradient(
+    farthest-side at 110vw 80vh,
+    var(--glow-blue)
+  );
+}
+
+.gradient-two {
+  position: absolute;
+  bottom: 10px;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  background-image: radial-gradient(
+    farthest-side at 0vw 80vh,
+    var(--glow-purple)
+  );
 }
 
 .container {
@@ -26,14 +56,46 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 10rem;
+  color: transparent;
+  text-align: center;
+  margin: 20px 0;
+  background-image: linear-gradient(
+    to left top,
+    var(--glow-h1)
+  );
+  background-clip: text;
+}
+
 strong {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   letter-spacing: 6px;
-  color: var(--white);
 }
 
-.App{
-  height: 500vh;
+a {
+  text-decoration: none;
+  color: hsl(var(--white));
+}
+
+/* .link-hover{
+  color: transparent;
+  background-image: radial-gradient(
+    farthest-side,
+    var(--glow-link)
+  );
+  background-clip: text;
+} */
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+}
+.App {
+  min-height: 500vh;
 }
