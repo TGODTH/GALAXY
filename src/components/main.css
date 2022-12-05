@@ -1,15 +1,14 @@
-header.container{
-    margin-top: 20px;
+main.container{
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
 .launch-app-container{
     height: 3rem;
     width: auto;
-    margin: 2rem 0;
+    margin: 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -40,8 +39,14 @@ header.container{
 }
 
 img.arrow{
-    height: 3.6rem;
+    height: 2.43rem;
     width: auto;
     filter: invert(99%) sepia(7%) saturate(28%) hue-rotate(48deg) brightness(111%) contrast(100%);
-    animation: launch-arrow 3s ease-in-out infinite alternate;
+    animation: launch-arrow 2s ease-in-out infinite alternate;
+}
+
+
+.header-link{
+    text-decoration: underline;
+    font-weight: 500;
 }

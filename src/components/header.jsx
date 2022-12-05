@@ -1,25 +1,23 @@
-import "./header.css";
-import arrow_right from "../pic/arrow_right.svg";
+const Header=(props)=>{
+    const splitSen=(sentence)=>{
+        
+        sentence= sentence.split("<br/>")
+        let result =[sentence[0]]
+        for (let i = 1; i < sentence.length; i++) {
+            result = result.concat(<br/>,sentence[i])
+        }
+        console.log(result)
+        return result
+        
+    }
+    
+    return (
+        <header>
+        <h1 className={props.side}>{splitSen(props.title)}</h1>
+        <p className={props.side}>{splitSen(props.description)}</p>
+        <a className="header-link" href="#">{props.link}</a>
+        </header>
+    )
 
-const Header = () => {
-  return (
-    <header className="container">
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-      />
-      
-      <h1>
-        Galaxychain
-        <br />
-        Liquidity Lab
-      </h1>
-      <p>Swap, earn, and build on the leading decentralized moon exchange.</p>
-      <a href="#" className="launch-app-container link-hover">
-        <strong className="launch-app-text">LAUNCH APP</strong>
-        <img className="arrow" src={arrow_right}></img>
-      </a>
-    </header>
-  );
-};
-export default Header;
+}
+export default Header

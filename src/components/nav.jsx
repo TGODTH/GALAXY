@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import logo from "../pic/logo.svg";
 import "./nav.css";
 const Nav = () => {
@@ -5,15 +6,15 @@ const Nav = () => {
     <nav>
       <div className="container">
         <div className="box">
-          <a href="#" className="logo">
+          <Link to="/" className="logo">
             <img className="logoPic" src={logo} alt="Galaxy logo" />
             <p className="logoText">GALAXY</p>
-          </a>
+          </Link>
         </div>
         <div className="box">
-          <a href="#" className="link">
+          <Link to="/ecosystem" className="link">
             ECOSYSTEM
-          </a>
+          </Link>
           <a href="#" className="link">
             LAUNCH APP
           </a>
