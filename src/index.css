@@ -39,10 +39,12 @@ body {
 .gradient-one {
   position: absolute;
   z-index: -1;
-  width: 100vw;
-  height: 200vw;
+  top:-50vw;
+  right: -125vw;
+  width: 250vw;
+  height: 250vw;
   background-image: radial-gradient(
-    circle farthest-side at 110vw 100vh,
+    circle farthest-side,
     var(--glow-blue)
   );
 }
@@ -53,7 +55,7 @@ body {
   width: 100vw;
   height: 100%;
   background-image: radial-gradient(
-    circle farthest-corner at 0vw 250vh,
+    circle farthest-corner at 0vw 220vh,
     var(--glow-purple)
   );
 }
