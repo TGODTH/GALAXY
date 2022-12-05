@@ -7,7 +7,7 @@ const Main = () => {
     <>
       <main className="container">
         <Header
-          title="Galaxychain<br/>Liquidity Lab"
+          title="UniverseChain<br/>Liquidity Lab"
           description="Swap, earn, and build on the leading decentralized moon exchange."
           side="text-center"
         />
