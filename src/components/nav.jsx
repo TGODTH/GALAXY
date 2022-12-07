@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../pic/logo.svg";
 import "./nav.css";
 const Nav = () => {
