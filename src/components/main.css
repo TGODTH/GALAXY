@@ -50,3 +50,40 @@ img.arrow{
     text-decoration: underline;
     font-weight: 500;
 }
+
+.mascot-container{
+    width: 60vw;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.mascot{
+    position: relative;
+    margin:0 auto;
+    height: auto;
+    width: 60vw;
+    z-index: -1;
+}
+
+.planet{
+    top: calc(1vw/1.543637443103107)
+}
+.stone{
+    top: calc(-60vw/1.543637443103107);
+}
+.robot-arm{
+    top: calc(-180vw/1.543637443103107);;
+}
+.robot{
+    top: calc(-120vw/1.543637443103107);;
+}
+
+@keyframes robot-arm {
+    from{
+
+    }
+    to{
+        
+    }
+}
