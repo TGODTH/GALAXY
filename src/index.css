@@ -9,35 +9,67 @@
   --glow-blue: hsla(var(--blue), 0.2), hsla(var(--blue), 0);
   --glow-purple: hsla(var(--purple), 0.2), hsla(var(--purple), 0);
   --glow-h1: hsl(276, 40%, 70%), hsl(var(--white));
-  --glow-link:hsl(298, 100%, 50%),hsl(var(--blue));
+  --glow-link: hsl(195, 100%, 50%), hsl(298, 100%, 50%);
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 3900px) {
+  html {
+    font-size: 32%;
+    letter-spacing: 0.1rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 580px) {
   html {
     font-size: 35%;
     letter-spacing: 0.1rem;
   }
-  h1{
-    font-size: 7rem;
+  h1 {
+    font-size: 8rem;
   }
 }
-
-@media screen and (min-width: 581px) and (max-width: 744px) {
+@media screen and (min-width: 581px) and (max-width: 780px) {
+  html {
+    font-size: 35%;
+    letter-spacing: 0.1rem;
+  }
+  h1 {
+    font-size: 10rem;
+  }
+}
+@media screen and (min-width: 781px) and (max-width: 1000px) {
   html {
     font-size: 48%;
     letter-spacing: 0.1rem;
   }
-  h1{
+  h1 {
     font-size: 10rem;
   }
+  .h1-info {
+    font-size: 8rem;
+  }
 }
-
-@media screen and (min-width: 745px) {
+@media screen and (min-width: 1001px) and (max-width: 1260px) {
   html {
     font-size: 62.5%;
     letter-spacing: 0.1rem;
   }
-  h1{
+  h1 {
+    font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1261px) {
+  html {
+    font-size: 62.5%;
+    letter-spacing: 0.1rem;
+  }
+  h1 {
     font-size: 10rem;
   }
 }
@@ -111,42 +143,40 @@ body {
   margin: 0 auto;
 }
 
+header h1 {
+  margin: 3rem auto;
+}
+
 h1 {
-  font-family: "Roboto", sans-serif;
   font-weight: 900;
-  color: transparent;
+  color: var(--white);
   text-align: center;
-  margin: 3rem 0;
-  background-image: linear-gradient(
-    to left top,
-    var(--glow-h1)
-  );
-  background-clip: text;
+  margin: 0rem auto;
+}
+
+h2 {
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin: 0rem auto;
+  font-size: 4rem;
 }
 
 strong {
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
-  letter-spacing: 6px;
+  letter-spacing: 0.6rem;
+  text-align: center;
 }
 
-/* .link-hover{
-  color: transparent;
-  background-image: radial-gradient(
-    farthest-side,
-    var(--glow-link)
-  );
-  background-clip: text;
-} */
-p, a {
+p,
+a {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 2rem;
   text-align: center;
   text-decoration: none;
   color: hsl(var(--white));
-  margin:0;
+  margin: 0;
 }
 .App {
   min-height: 500vh;
@@ -154,14 +184,13 @@ p, a {
   position: relative;
 }
 
-.text-left{
+.text-left {
   text-align: left;
-  
 }
-p.text-left{
+p.text-left {
   width: 50rem;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }

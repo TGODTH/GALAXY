@@ -12,10 +12,10 @@ const Nav = () => {
           </Link>
         </div>
         <div className="box">
-          <Link to="/ecosystem" className="link">
+          <Link to="/ecosystem" className="link hover-color">
             ECOSYSTEM
           </Link>
-          <a href="#" className="link">
+          <a href="#" className="link hover-color">
             LAUNCH APP
           </a>
         </div>

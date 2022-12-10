@@ -7,8 +7,8 @@ main.container{
 
 .launch-app-container{
     height: 3rem;
-    width: auto;
-    margin: 4rem 0;
+    margin: 4rem auto;
+    width: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -16,6 +16,15 @@ main.container{
 
 .launch-app-text{
     animation: launch-text 2s ease-in-out infinite alternate;
+}
+
+.header-text{
+    color: transparent;
+    background-image: linear-gradient(
+    to left top,
+    var(--glow-h1)
+  );
+  background-clip: text;
 }
 
 @keyframes launch-text {
@@ -38,13 +47,14 @@ main.container{
     }
 }
 
+img.arrow-launch{
+    animation: launch-arrow 2s ease-in-out infinite alternate;
+}
 img.arrow{
     height: 2.43rem;
     width: auto;
     filter: invert(99%) sepia(7%) saturate(28%) hue-rotate(48deg) brightness(111%) contrast(100%);
-    animation: launch-arrow 2s ease-in-out infinite alternate;
 }
-
 
 .header-link{
     text-decoration: underline;
@@ -52,38 +62,86 @@ img.arrow{
 }
 
 .mascot-container{
-    width: 60vw;
-    height: auto;
-    position: relative;
-    margin: auto;
+    margin: auto auto 5rem auto;
 }
 
 .mascot{
+    
     position: relative;
+    top: 0vh;
     margin:0 auto;
     height: auto;
-    width: 60vw;
+    width: 400%;
     z-index: -1;
 }
 
 .planet{
     top: calc(1vw/1.543637443103107)
 }
+.mascot-div{
+    width: 25%;
+    display:inline-block;
+    
+}
 .stone{
-    top: calc(-60vw/1.543637443103107);
+    left: -300%;
 }
 .robot-arm{
-    top: calc(-180vw/1.543637443103107);;
+    left: -200%;
+    animation: robot-arm 2s ease-in-out infinite alternate ;
 }
 .robot{
-    top: calc(-120vw/1.543637443103107);;
+    left: -100%;
 }
 
 @keyframes robot-arm {
     from{
+        transform-origin: 33.48765432098765% 55.25250890255746%;
+        transform: rotate(-5deg) ;
+    }
+    to{ 
+        transform-origin: 33.48765432098765% 55.25250890255746%;
+        transform: rotate(5deg) ;
+    }
+}
 
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 2rem auto;
+}
+
+.infoCard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 780px) {
+    .infoCard-container{
+        flex-direction: column;
+        align-items: center;
     }
-    to{
-        
+  }
+  .infoCard{
+    width: 100%;
+}
+
+  @media screen and (min-width: 781px) {
+    .infoCard-container{
+        flex-direction: row;
     }
+    .infoCard{
+        width: 30%;
+    }
+  }
+
+div.info{
+    width: 100%;
+}
+
+h2.info{
+    margin: 5rem auto 10rem auto;
 }

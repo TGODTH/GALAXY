@@ -3,7 +3,6 @@ import arrow_right from "../pic/arrow_right.svg";
 import Header from "./header";
 import "./animation.css";
 import Info from "./info";
-
 const Main = () => {
   return (
     <main className="container">
@@ -12,10 +11,10 @@ const Main = () => {
         description="Swap, earn, and build on the leading decentralized moon exchange."
         side="text-center"
       />
-      <a href="#" className="launch-app-container link-hover fade-in">
+      <a href="#" className="launch-app-container hover-color fade-in">
         <strong className="launch-app-text">LAUNCH APP</strong>
         <img
-          className="arrow"
+          className="arrow arrow-launch"
           src={arrow_right}
           alt="arrow point to right"
         ></img>
