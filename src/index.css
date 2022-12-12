@@ -8,35 +8,46 @@
   --purple: 276, 100%, 41%;
   --glow-blue: hsla(var(--blue), 0.2), hsla(var(--blue), 0);
   --glow-purple: hsla(var(--purple), 0.2), hsla(var(--purple), 0);
-  --glow-h1: hsl(276, 40%, 70%), hsl(var(--white));
+  --overlay-h1: hsl(276, 40%, 70%), hsl(var(--white));
   --glow-link: hsl(195, 100%, 50%), hsl(298, 100%, 50%);
+  --card-bg:hsl(268, 100%, 7%);
+  --card-bg-hover:hsl(268, 100%, 17%);
 }
 
 @media screen and (max-width: 3900px) {
   html {
-    font-size: 32%;
+    font-size: 48%;
     letter-spacing: 0.1rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 5rem;
+  }
+  .h1-info {
+    font-size: 6rem;
   }
 }
 @media screen and (min-width: 391px) and (max-width: 580px) {
   html {
-    font-size: 35%;
+    font-size: 48%;
     letter-spacing: 0.1rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
+  }
+  .h1-info {
+    font-size: 6rem;
   }
 }
 @media screen and (min-width: 581px) and (max-width: 780px) {
   html {
-    font-size: 35%;
+    font-size: 48%;
     letter-spacing: 0.1rem;
   }
   h1 {
     font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 8rem;
   }
 }
 @media screen and (min-width: 781px) and (max-width: 1000px) {
@@ -71,6 +82,9 @@
   }
   h1 {
     font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 8rem;
   }
 }
 
@@ -139,7 +153,7 @@ body {
 
 .container {
   width: 90vw;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -160,6 +174,13 @@ h2 {
   text-align: center;
   margin: 0rem auto;
   font-size: 4rem;
+}
+h3 {
+  font-weight: 500;
+  color: var(--white);
+  text-align: left;
+  margin: 0 0;
+  font-size: 2.8rem;
 }
 
 strong {
@@ -186,9 +207,6 @@ a {
 
 .text-left {
   text-align: left;
-}
-p.text-left {
-  width: 50rem;
 }
 
 .text-center {

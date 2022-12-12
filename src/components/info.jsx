@@ -9,14 +9,30 @@ import { useEffect, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const Info = () => {
-  let observe_ref = useRef([]);
-  const observe = new IntersectionObserver(() => {}, []);
+  const observe_ref = useRef([]);
   useEffect(() => {
-    console.log("observer_el ", observe_ref.current);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (
+          entry.target.classList.toggle(
+            `fade-in-up${index}`,
+            entry.isIntersecting
+          )
+        ) {
+          observer.unobserve(entry.target);
+          entry.target.classList.remove("invisible");
+        }
+      });
+    });
+    observe_ref.current.forEach((card) => {
+      observer.observe(card);
+      card.classList.add("invisible");
+    });
   }, []);
+
   return (
     <>
-      <div className="mascot-container">
+      <div className="mascot-container fade-in">
         <Parallax
           scale={["90%", "120%"]}
           translateX={["10%", "-20%"]}
@@ -24,14 +40,14 @@ const Info = () => {
         >
           <img src={planet} alt="planet" className="mascot planet" />
         </Parallax>
-        <Parallax className="mascot-div">
+        <Parallax translateY={["-10%", "0%"]} className="mascot-div">
           <img
             src={robot}
             alt="robot using interface"
             className="mascot robot"
           />
         </Parallax>
-        <Parallax className="mascot-div">
+        <Parallax translateY={["-10%", "0%"]} className="mascot-div">
           <img
             src={robotsArm}
             alt="robot's arm pointing to interface"

@@ -1,5 +1,5 @@
 import arrow_right from "../pic/arrow_right.svg";
-import { splitLine} from './utilities';
+import { splitLine } from "./utilities";
 
 const InfoCard = (props) => {
   return (
