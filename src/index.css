@@ -6,86 +6,12 @@
   --white: 45, 100%, 98%;
   --blue: 187, 100%, 40%;
   --purple: 276, 100%, 41%;
-  --glow-blue: hsla(var(--blue), 0.2), hsla(var(--blue), 0);
+  --glow-blue: hsla(var(--blue), 0.25), hsla(var(--blue), 0);
   --glow-purple: hsla(var(--purple), 0.2), hsla(var(--purple), 0);
   --overlay-h1: hsl(276, 40%, 70%), hsl(var(--white));
   --glow-link: hsl(195, 100%, 50%), hsl(298, 100%, 50%);
-  --card-bg:hsl(268, 100%, 7%);
-  --card-bg-hover:hsl(268, 100%, 17%);
-}
-
-@media screen and (max-width: 3900px) {
-  html {
-    font-size: 48%;
-    letter-spacing: 0.1rem;
-  }
-  h1 {
-    font-size: 5rem;
-  }
-  .h1-info {
-    font-size: 6rem;
-  }
-}
-@media screen and (min-width: 391px) and (max-width: 580px) {
-  html {
-    font-size: 48%;
-    letter-spacing: 0.1rem;
-  }
-  h1 {
-    font-size: 6rem;
-  }
-  .h1-info {
-    font-size: 6rem;
-  }
-}
-@media screen and (min-width: 581px) and (max-width: 780px) {
-  html {
-    font-size: 48%;
-    letter-spacing: 0.1rem;
-  }
-  h1 {
-    font-size: 10rem;
-  }
-  .h1-info {
-    font-size: 8rem;
-  }
-}
-@media screen and (min-width: 781px) and (max-width: 1000px) {
-  html {
-    font-size: 48%;
-    letter-spacing: 0.1rem;
-  }
-  h1 {
-    font-size: 10rem;
-  }
-  .h1-info {
-    font-size: 8rem;
-  }
-}
-@media screen and (min-width: 1001px) and (max-width: 1260px) {
-  html {
-    font-size: 62.5%;
-    letter-spacing: 0.1rem;
-  }
-  h1 {
-    font-size: 10rem;
-  }
-  .h1-info {
-    font-size: 8rem;
-  }
-}
-
-@media screen and (min-width: 1261px) {
-  html {
-    font-size: 62.5%;
-    letter-spacing: 0.1rem;
-  }
-  h1 {
-    font-size: 10rem;
-  }
-  .h1-info {
-    font-size: 8rem;
-  }
+  --card-bg: hsl(268, 100%, 7%);
+  --card-bg-hover: hsl(268, 100%, 17%);
 }
 
 ::-webkit-scrollbar {
@@ -123,7 +49,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(
-    farthest-side at 100vw 100vh,
+    farthest-side at 100% 25%,
     var(--glow-blue)
   );
 }
@@ -132,10 +58,10 @@ body {
   position: absolute;
   box-sizing: border-box;
   z-index: -1;
-  width: 80vw;
-  height: 80vw;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(
-    circle farthest-side at 0vw 0vh,
+    circle farthest-side at 5% 95%,
     var(--glow-purple)
   );
 }
@@ -146,9 +72,15 @@ body {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(
-    circle farthest-side at -10vw 300vh,
+    circle farthest-side at 0% 0%,
     var(--glow-purple)
   );
+}
+
+.App {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
 .container {
@@ -166,6 +98,7 @@ h1 {
   color: var(--white);
   text-align: center;
   margin: 0rem auto;
+  transition-duration: 0.5s;
 }
 
 h2 {
@@ -174,6 +107,7 @@ h2 {
   text-align: center;
   margin: 0rem auto;
   font-size: 4rem;
+  transition-duration: 0.5s;
 }
 h3 {
   font-weight: 500;
@@ -181,6 +115,7 @@ h3 {
   text-align: left;
   margin: 0 0;
   font-size: 2.8rem;
+  transition-duration: 0.5s;
 }
 
 strong {
@@ -193,22 +128,106 @@ p,
 a {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   color: hsl(var(--white));
   margin: 0;
+  transition-duration: 0.5s;
 }
-.App {
-  min-height: 500vh;
-  overflow-x: hidden;
-  position: relative;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .text-left {
   text-align: left;
+  justify-content: left;
 }
 
 .text-center {
   text-align: center;
+}
+
+@media screen and (max-width: 3900px) {
+  html {
+    font-size: 48%;
+    letter-spacing: 0.1rem;
+  }
+  h1.header-text {
+    font-size: 5rem;
+  }
+  .h1-info {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 580px) {
+  html {
+    font-size: 48%;
+    letter-spacing: 0.1rem;
+  }
+  h1.header-text {
+    font-size: 6rem;
+  }
+  .h1-info {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 581px) and (max-width: 780px) {
+  html {
+    font-size: 48%;
+    letter-spacing: 0.1rem;
+  }
+  h1.header-text {
+    font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 781px) and (max-width: 1000px) {
+  html {
+    font-size: 48%;
+    letter-spacing: 0.1rem;
+  }
+  h1.header-text {
+    font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1260px) {
+  html {
+    font-size: 62.5%;
+    letter-spacing: 0.1rem;
+  }
+  h1.header-text {
+    font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1261px) {
+  html {
+    font-size: 62.5%;
+    letter-spacing: 0.1rem;
+  }
+  h1.header-text {
+    font-size: 10rem;
+  }
+  .h1-info {
+    font-size: 9rem;
+  }
+  p {
+    font-size: 2rem;
+  }
 }

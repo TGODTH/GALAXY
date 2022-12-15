@@ -5,7 +5,6 @@ import Ecosystem from "./components/ecosystem";
 import Main from "./components/main";
 import Nav from "./components/nav";
 
-
 function App() {
   return (
     <ParallaxProvider>
@@ -14,7 +13,7 @@ function App() {
         <div className="gradient-two"></div>
         <div className="gradient-three"></div>
         <BrowserRouter>
-        <Nav />
+          <Nav />
           <Routes>
             <Route path="/" index element={<Main />} />
             <Route path="/ecosystem" element={<Ecosystem />} />
