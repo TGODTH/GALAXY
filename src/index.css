@@ -10,7 +10,7 @@
   --glow-purple: hsla(var(--purple), 0.2), hsla(var(--purple), 0);
   --overlay-h1: hsl(276, 40%, 70%), hsl(var(--white));
   --glow-link: hsl(195, 100%, 50%), hsl(298, 100%, 50%);
-  --card-bg: hsl(268, 100%, 7%);
+  --card-bg: hsl(257, 100%, 7%);
   --card-bg-hover: hsl(268, 100%, 17%);
 }
 
