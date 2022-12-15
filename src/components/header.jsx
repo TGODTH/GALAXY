@@ -1,5 +1,5 @@
 import "./animation.css";
-import { splitLine} from './utilities';
+import { splitLine } from "./utilities";
 
 const Header = (props) => {
   return (
@@ -9,8 +9,13 @@ const Header = (props) => {
       </h1>
       <p className={props.side + " fade-in-up"}>
         {splitLine(props.description)}
-        <br/>
-        <a className={"header-link "} href="#">
+        <br />
+        <a
+          className={"header-link "}
+          href="https://grants.osmosis.zone/"
+          rel="noreferrer"
+          target="_blank"
+        >
           {props.link}
         </a>
       </p>
