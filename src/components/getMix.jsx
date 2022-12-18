@@ -41,7 +41,7 @@ const GetMix = () => {
   }, []);
   return (
     <div className="getMix-container flex-col">
-      <img className="getMix" src={colony} alt="" />
+      {/* <img className="getMix" src={colony} alt="Cover picture of get mix container" /> */}
       <h2 className="getMix flex">
         <img className="card-svg" src={solar_system} alt="" />
         Get mixin'

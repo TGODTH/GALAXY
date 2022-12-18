@@ -4,17 +4,16 @@ import Header from "./header";
 import "./animation.css";
 import Info from "./info";
 import GetMix from "./getMix";
-import Community from "./community";
 
 const Main = () => {
   return (
-    <main className="container">
+    <>
       <Header
         title="UniverseChain<br/>Liquidity Lab"
         description="Swap, earn, and build on the leading decentralized moon exchange."
         side="text-center"
       />
-      <a href="#" className="launch-app-container hover-color fade-in">
+      <a href="https://app.osmosis.zone/" className="launch-app-container hover-color fade-in">
         <strong className="launch-app-text">LAUNCH APP</strong>
         <img
           className="arrow arrow-launch"
@@ -24,8 +23,7 @@ const Main = () => {
       </a>
       <Info />
       <GetMix />
-      <Community/>
-    </main>
+    </>
   );
 };
 export default Main;

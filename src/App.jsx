@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "./App.css";
+import Community from "./components/community";
 import Ecosystem from "./components/ecosystem";
+import Footer from "./components/footer";
 import Main from "./components/main";
 import Nav from "./components/nav";
 
@@ -14,10 +16,14 @@ function App() {
         <div className="gradient-three"></div>
         <BrowserRouter>
           <Nav />
-          <Routes>
-            <Route path="/" index element={<Main />} />
-            <Route path="/ecosystem" element={<Ecosystem />} />
-          </Routes>
+          <main className="container">
+            <Routes>
+              <Route path="/" index element={<Main />} />
+              <Route path="/ecosystem" element={<Ecosystem />} />
+            </Routes>
+            <Community />
+          </main>
+          <Footer />
         </BrowserRouter>
       </div>
     </ParallaxProvider>

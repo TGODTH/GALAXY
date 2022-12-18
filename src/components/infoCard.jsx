@@ -4,7 +4,6 @@ import { splitLine } from "./utilities";
 
 const InfoCard = (props, ref) => {
   return (
-    <>
       <a
         ref={ref}
         href={props.link}
@@ -23,7 +22,6 @@ const InfoCard = (props, ref) => {
           ></img>
         </div>
       </a>
-    </>
   );
 };
 export default React.forwardRef(InfoCard);
